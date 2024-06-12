@@ -1,3 +1,4 @@
+# 엑셀 파일 로드하기 
 import openpyxl
 wb = openpyxl.load_workbook('test.xlsx')    # 엑셀 파일 로드 
 sheet = wb.active                           # 시트 활성화 

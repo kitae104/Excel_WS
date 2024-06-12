@@ -1,3 +1,4 @@
+# 엑셀 파일 저장하기
 import openpyxl
 wb = openpyxl.Workbook()  # 새로운 워크북 생성 
 
