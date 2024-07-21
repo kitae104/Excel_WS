@@ -2,14 +2,14 @@ import openpyxl
 from openpyxl.styles import Font
 
 wb = openpyxl.Workbook()
-sheet = wb.active
+ws = wb.active
 
-sheet["A1"] = "data"
+ws["A1"] = "data"
 
 # 병합하기 & 병합 풀기 
-sheet.merge_cells("B1:E1")
-sheet["B1"] = "엑셀 병합 테스트"
-sheet.unmerge_cells("B1:E1")
+ws.merge_cells("B1:E1")
+ws["B1"] = "엑셀 병합 테스트"
+ws.unmerge_cells("B1:E1")
 
 # 포맷 설정하기 
 font1 = Font(
@@ -32,7 +32,7 @@ font2 = Font(
     strike= False 
 )
 
-sheet["A1"].font = font1
-sheet["B1"].font = font2
+ws["A1"].font = font1
+ws["B1"].font = font2
 
 wb.save("merging.xlsx")
