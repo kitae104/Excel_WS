@@ -1,11 +1,11 @@
-import openpyxl
+from openpyxl import load_workbook
 from openpyxl.styles import PatternFill, Font
 
-wb = openpyxl.load_workbook("file.xlsx")  # 파일 불러오기
-sheet = wb.active                         # 현재 활성화된 sheet 가져오기
+wb = load_workbook("file.xlsx")  # 파일 불러오기
+ws = wb.active                         # 현재 활성화된 ws 가져오기
 
 # 1~10행, 1~3열의 셀을 순회하면서 
-for row in sheet.iter_rows(min_row = 1, max_row = 10, min_col =1, max_col=3): 
+for row in ws.iter_rows(min_row = 1, max_row = 10, min_col =1, max_col=3): 
     for cell in row:
         # 셀의 값이 40보다 크면 배경을 노란색으로, 글씨를 기울임꼴로 변경
         if cell.value is not None and cell.value > 40:

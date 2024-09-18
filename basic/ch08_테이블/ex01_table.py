@@ -4,8 +4,9 @@ from openpyxl.styles import PatternFill
 
 wb = openpyxl.Workbook()  # 새 워크북 생성
 ws = wb.active # 현재 활성화된 sheet 가져오기
-
-data = [                      # 데이터 준비 
+ 
+ # 데이터 준비 
+data = [                     
   ["이름", "나이", "도시"],
   ["홍길동", 20, "서울"],
   ["김철수", 30, "인천"],
